@@ -116,3 +116,7 @@ func main() {
   fmt.Println(IndexOfEven([]int{1, 17, 6, 98})) // Output: 2
 }
 ```
+
+## Exercises
+
+Check the [exercises](exercises) folder for the list of problems.
