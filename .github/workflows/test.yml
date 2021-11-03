@@ -1,0 +1,86 @@
+name: Test
+on: [push, pull_request]
+jobs:
+  _01_sort_ints:
+    name: 01_sort_ints
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+    - name: Test
+      run: go test -v ./01_sort_ints
+
+  _02_sort_int_slice:
+    name: 02_sort_int_slice
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+    - name: Test
+      run: go test -v ./02_sort_int_slice
+
+  any_odds_and_evens:
+    name: exercises/any_odds_and_evens
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+    - name: Test
+      run: go test -v ./exercises/any_odds_and_evens
+
+  only_odds_and_evens:
+    name: exercises/only_odds_and_evens
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+    - name: Test
+      run: go test -v ./exercises/only_odds_and_evens
+
+  filter_odds_and_evens:
+    name: exercises/filter_odds_and_evens
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+    - name: Test
+      run: go test -v ./exercises/filter_odds_and_evens
+
+  sort:
+    name: exercises/sort
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+    - name: Test
+      run: go test -v ./exercises/sort
+
+  mult_table:
+    name: exercises/mult_table
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+    - name: Test
+      run: go test -v ./exercises/mult_table
