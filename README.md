@@ -66,7 +66,7 @@ fmt.Println(len(a), cap(a)) // Output: 4 4
 fmt.Println(len(s), cap(s)) // Output: 2 3
 
 s = append(s, -1)
-fmt.Println(len(a), cap(a), a) // Output: 4 4 4 4 [1 -1 0 -1]
+fmt.Println(len(a), cap(a), a) // Output: 4 4 [1 -1 0 -1]
 fmt.Println(len(s), cap(s), s) // Output: 3 3 [-1 0 -1]
 
 s = append(s, 123)
