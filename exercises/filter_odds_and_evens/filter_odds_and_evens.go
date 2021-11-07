@@ -12,6 +12,27 @@ func FilterOdds(s []int) []int {
 	return result
 }
 
+func FilterEvens(s []int) []int {
+	result := make([]int, 0)
+	for _, value := range s {
+		if value%2 == 0 {
+			result = append(result, value)
+		}
+	}
+	return result
+}
+
 func main() {
-	fmt.Println(FilterOdds([]int{1, 2, 3, 4, 5, 6, 7, 8, 9}))
+	fmt.Println("Enter numbers(0 for stop)")
+	s := make([]int, 0)
+	for {
+		var tmp int
+		fmt.Scan(&tmp)
+		if tmp == 0 {
+			break
+		}
+		s = append(s, tmp)
+	}
+	fmt.Println("Odds only:", FilterOdds(s))
+	fmt.Println("Evens only:", FilterEvens(s))
 }
