@@ -222,7 +222,7 @@ where `T` is the data type.
 Memory for slice elements has to be initialized explicitly using `make([][][]...[]T{}, len1)`, where `len1` is the length of the outermost dimension.
 
 ```go
-var [][]int s
+var s [][]int
 fmt.Println(s) // []
 
 rows, cols := 4, 5
