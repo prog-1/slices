@@ -55,6 +55,9 @@ func spiral(x, y int) [][]int {
 		curX++
 
 	}
+	if x == 1 && y == 1 {
+		matrix[0] = []int{1}
+	}
 
 	return matrix
 }
@@ -63,6 +66,10 @@ func main() {
 	fmt.Println("Enter the width and hight of spiral")
 	var x, y int
 	fmt.Scan(&x, &y)
+	if x < 0 || y < 0 {
+		fmt.Println("Error. Eneter only positive values")
+		return
+	}
 	matrix := spiral(x, y)
 	for _, v := range matrix {
 		for _, j := range v {
