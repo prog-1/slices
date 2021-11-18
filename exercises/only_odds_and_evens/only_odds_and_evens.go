@@ -4,7 +4,7 @@ import "fmt"
 
 func AreOddsOnly(s []int) bool {
 	for _, v := range s {
-		if v%2 == 1 {
+		if v%2 == 0 {
 			return false
 		}
 	}
@@ -13,7 +13,7 @@ func AreOddsOnly(s []int) bool {
 
 func AreEvenOnly(s []int) bool {
 	for _, v := range s {
-		if v%2 == 0 {
+		if v%2 != 0 {
 			return false
 		}
 	}
@@ -29,14 +29,14 @@ func main() {
 		fmt.Scan(&input[i])
 	}
 	fmt.Println(input)
-	if AreEvenOnly(input) {
-		fmt.Println("All numbers evens")
-	} else {
-		fmt.Println("Not all numbers evens")
-	}
 	if AreOddsOnly(input) {
 		fmt.Println("All numbers are odds")
 	} else {
 		fmt.Println("Not all numbers are odds")
+	}
+	if AreEvenOnly(input) {
+		fmt.Println("All numbers evens")
+	} else {
+		fmt.Println("Not all numbers evens")
 	}
 }
