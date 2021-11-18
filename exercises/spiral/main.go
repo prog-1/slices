@@ -74,12 +74,14 @@ func main() {
 	fmt.Scan(&x, &y)
 	if x < 0 || y < 0 {
 		fmt.Println("Rectangles lenght and height can't be negative")
-	}
-	s := spiral(x, y)
-	for _, v := range s {
-		for _, j := range v {
-			fmt.Printf("%3d", j)
+	} else {
+		s := spiral(x, y)
+		for _, v := range s {
+			for _, j := range v {
+				fmt.Printf("%3d", j)
+			}
+			fmt.Println()
 		}
-		fmt.Println()
 	}
+
 }
