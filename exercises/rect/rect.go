@@ -28,7 +28,8 @@ func main() {
 	for v := range rectangle {
 		for i := range rectangle[v] {
 			fmt.Println(rectangle[v][i])
+			fmt.Printf("%3d", rectangle[v][i])
 		}
-
+		fmt.Println()
 	}
 }
