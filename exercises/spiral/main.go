@@ -61,9 +61,12 @@ func Spiral(x, y int) [][]int {
 }
 
 func main() {
-	fmt.Println("Enter x and y (width and height)")
+	fmt.Println("Enter x and y (width and height):")
 	var x, y int
 	fmt.Scan(&x, &y)
+	if x <= 0 || y <= 0 {
+		fmt.Println("Width and height can't be <= 0")
+	}
 	spiral := Spiral(x, y)
 	for _, v := range spiral {
 		for _, j := range v {
