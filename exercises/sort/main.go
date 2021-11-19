@@ -32,6 +32,8 @@ func main() {
 		fmt.Scan(&n)
 		s = append(s, n)
 	}
+	Sort1(s)
 	fmt.Println("Sorted (sort1):", s)
+	Sort2(s)
 	fmt.Println("Sorted (sort2):", s)
 }
