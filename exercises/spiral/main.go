@@ -72,3 +72,5 @@ func main() {
 		fmt.Println()
 	}
 }
+
+// I took someone else's scheme and idea, but figured it out
