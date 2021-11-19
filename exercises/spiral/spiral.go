@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func spiral(x, y int) [][]int {
+func Spiral(x, y int) [][]int {
 
 	matrix := make([][]int, y)
 
@@ -67,10 +67,10 @@ func main() {
 	var x, y int
 	fmt.Scan(&x, &y)
 	if x < 0 || y < 0 {
-		fmt.Println("Error. Eneter only positive values")
+		fmt.Println("Error. Enter only positive values")
 		return
 	}
-	matrix := spiral(x, y)
+	matrix := Spiral(x, y)
 	for _, v := range matrix {
 		for _, j := range v {
 			fmt.Printf("%3d", j)
