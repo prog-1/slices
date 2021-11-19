@@ -21,9 +21,13 @@ func Rect(x, y int) (rect [][]int) {
 }
 
 func main() {
-	fmt.Println("Enter the lenght and height of rectangle")
+	fmt.Println("Enter the lenght and height of rectangle:")
 	var x, y int
 	fmt.Scan(&x, &y)
+	if x <= 0 || y <= 0 {
+		fmt.Println("Error. Eneter only positive values")
+		return
+	}
 	rectangle := Rect(x, y)
 	for v := range rectangle {
 		for i := range rectangle[v] {
