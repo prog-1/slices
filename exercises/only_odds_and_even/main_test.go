@@ -11,6 +11,7 @@ func TestAreOddsOnly(t *testing.T) {
 		{[]int{2}, false},
 		{[]int{3}, true},
 		{[]int{3, 5, 9}, true},
+		{[]int{-3, 5, 9}, true},
 	} {
 		got := AreOddsOnly(tc.s)
 		if got != tc.want {
@@ -27,6 +28,7 @@ func TestAreEvenOnly(t *testing.T) {
 		{[]int{3}, false},
 		{[]int{2}, true},
 		{[]int{2, 4, 8}, true},
+		{[]int{-2, 4, 8}, true},
 	} {
 		got := AreEvenOnly(tc.s)
 		if got != tc.want {

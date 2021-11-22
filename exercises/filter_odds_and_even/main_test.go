@@ -20,16 +20,15 @@ func TestFilterOdds(t *testing.T) {
 		want []int
 	}{
 		{[]int{}, []int{}},
-		{[]int{4}, []int{}},
 		{[]int{3}, []int{3}},
-		{[]int{2, 4, 8}, []int{}},
-		{[]int{4, -1, 8}, []int{1}},
-		{[]int{7, 7, 7}, []int{7, 7, 7}},
-		{[]int{-3, 8, 7}, []int{-3, 7}},
+		{[]int{2}, []int{}},
+		{[]int{3, 5, 7}, []int{3, 5, 7}},
+		{[]int{3, 2, 5}, []int{3, 5}},
+		{[]int{-1, 3, -2}, []int{-1, 3}},
 	} {
 		got := FilterOdds(tc.s)
 		if !equal(got, tc.want) {
-			t.Errorf("Sort(%v) = %v, want = %v", tc.s, got, tc.want)
+			t.Errorf("FilterOdds(%v) = %v, want = %v", tc.s, got, tc.want)
 		}
 	}
 }
@@ -44,7 +43,6 @@ func TestFilterEvens(t *testing.T) {
 		{[]int{4, 4, 4}, []int{4, 4, 4}},
 		{[]int{2, -1, 8}, []int{2, 8}},
 		{[]int{7, 7, 7}, []int{}},
-		{[]int{-3, -8, 8}, []int{8, -8}},
 	} {
 		got := FilterEvens(tc.s)
 		if !equal(got, tc.want) {

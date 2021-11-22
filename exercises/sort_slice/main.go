@@ -32,19 +32,8 @@ func main() {
 		s = append(s, n)
 	}
 	fmt.Println(s)
-	fmt.Println("1-> custom sort")
-	fmt.Println("2-> build in sort")
-	var x int
-	fmt.Scan(&x)
-	if x == 1 {
-		Sort1(s)
-		fmt.Println(s)
-	}
-	if x == 2 {
-		Sort2(s)
-		fmt.Println(s)
-	} else {
-		fmt.Println("wrong")
-	}
-
+	Sort1(s)
+	fmt.Println("Sort1:", s)
+	Sort2(s)
+	fmt.Println("Sort2:", s)
 }
