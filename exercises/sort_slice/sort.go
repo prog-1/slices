@@ -22,7 +22,7 @@ func Sort2(s []int) {
 
 func main() {
 	var y int
-	fmt.Print("Enter")
+	fmt.Print("Enter how many numbers:")
 	fmt.Scan(&y)
 	var s []int
 	for i := 0; i < y; i++ {
