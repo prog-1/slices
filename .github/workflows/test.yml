@@ -84,3 +84,15 @@ jobs:
         go-version: 1.17
     - name: Test
       run: go test -v ./exercises/mult_table
+      
+  spiral:
+    name: exercises/spiral
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+    - name: Test
+      run: go test -v ./exercises/spiral
