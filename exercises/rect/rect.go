@@ -4,6 +4,9 @@ import "fmt"
 
 func Rect(x, y int) (rect [][]int) {
 	rows, cols := y, x
+	if x < 0 || y < 0 {
+		return nil
+	}
 	r := make([][]int, rows)
 	for row := 0; row < rows; row++ {
 		r[row] = make([]int, cols)
