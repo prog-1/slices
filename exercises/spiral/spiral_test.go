@@ -17,6 +17,8 @@ func TestSpiral(t *testing.T) {
 		{1, 1, [][]int{
 			{1},
 		}},
+		{-1, 0, nil},
+		{0, -1, nil},
 		{2, 1, [][]int{
 			{1, 2},
 		}},

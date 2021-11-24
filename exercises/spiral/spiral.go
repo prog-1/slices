@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 func Spiral(x, y int) [][]int {
-
+	if x < 0 || y < 0 {
+		return nil
+	}
 	matrix := make([][]int, y)
 
 	for i := range matrix {
@@ -66,7 +68,7 @@ func main() {
 	fmt.Println("Enter the width and hight of spiral")
 	var x, y int
 	fmt.Scan(&x, &y)
-	if x < 0 || y < 0 {
+	if x <= 0 || y <= 0 {
 		fmt.Println("Error. Enter only positive values")
 		return
 	}
