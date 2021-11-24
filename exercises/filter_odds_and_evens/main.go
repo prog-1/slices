@@ -5,7 +5,7 @@ import "fmt"
 func OnlyOdd(s []int) []int {
 	a := make([]int, 0)
 	for _, value := range s {
-		if value%2 == 0 {
+		if value%2 != 0 {
 			a = append(a, value)
 		}
 
@@ -15,7 +15,7 @@ func OnlyOdd(s []int) []int {
 func OnlyEven(s []int) []int {
 	b := make([]int, 0)
 	for _, value := range s {
-		if value%2 != 0 {
+		if value%2 == 0 {
 			b = append(b, value)
 		}
 	}
