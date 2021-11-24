@@ -226,18 +226,42 @@ var s [][]int
 fmt.Println(s) // []
 
 rows, cols := 4, 5
-s := make([][]int, rows)
+s = make([][]int, rows)
 fmt.Println(s) // [[] [] [] []]
 
-table[0] = []int{1, 2, 3, 4, 5}
+s[0] = []int{1, 2, 3, 4, 5}
 for row := 1; row < rows; row++ {
-    table[row] = make([]int, cols)
+    s[row] = make([]int, cols)
 }
 //  [
 //      [1, 2, 3, 4, 5],
 //      [0, 0, 0, 0, 0],
 //      [0, 0, 0, 0, 0],
 //      [0, 0, 0, 0, 0],
+//  ]
+```
+
+Individual elements can be added to a slice using `append([][]T{}, []T{})`
+(`append` is a function that returns a new slice).
+
+```go
+s = append(sl, []int{10, 11})
+fmt.Println(s)
+//  [
+//      [1, 2, 3, 4, 5],
+//      [0, 0, 0, 0, 0],
+//      [0, 0, 0, 0, 0],
+//      [0, 0, 0, 0, 0],
+//      [10, 11],
+//  ]
+s[2] = append(s[2], -1)
+fmt.Println(s)
+//  [
+//      [1, 2, 3, 4, 5],
+//      [0, 0, 0, 0, 0],
+//      [0, 0, 0, 0, 0, -1],
+//      [0, 0, 0, 0, 0],
+//      [10, 11],
 //  ]
 ```
 
