@@ -35,8 +35,8 @@ func TestRect(t *testing.T) {
 			{1, 1, 1, 1, 1, 1, 1, 1},
 		}},
 	} {
-		got := Rect(tc.x, tc.y)
-		if !equal(got, tc.want) {
+
+		if got := Rect(tc.x, tc.y); !equal(got, tc.want) {
 			t.Errorf("Rect(%v, %v) = %v, want = %v", tc.x, tc.y, got, tc.want)
 		}
 	}

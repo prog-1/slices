@@ -6,7 +6,7 @@ import (
 
 func AnyIsOdd(s []int) bool {
 	for _, v := range s {
-		if v%2 == 1 {
+		if v%2 != 0 {
 			return true
 		}
 	}

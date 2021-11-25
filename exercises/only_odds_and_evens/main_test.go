@@ -11,14 +11,15 @@ func TestAreOddsOnly(t *testing.T) {
 		{[]int{0}, false},
 		{[]int{1}, true},
 		{[]int{2}, false},
+		{[]int{-2, 3, 5, 3}, false},
 		{[]int{2, 3}, false},
 		{[]int{2, 2, 4}, false},
 		{[]int{1, 3, 5, 6}, false},
 		{[]int{-1, -3, -5}, true},
 		{[]int{1, 21, 1286731}, true},
 	} {
-		got := AreOddsOnly(tc.s)
-		if got != tc.want {
+
+		if got := AreOddsOnly(tc.s); got != tc.want {
 			t.Errorf("AreOddsOnly(%v) = %v , want = %v", tc.s, got, tc.want)
 		}
 	}
@@ -34,6 +35,7 @@ func TestAreEvenOnly(t *testing.T) {
 		{[]int{2}, true},
 		{[]int{2, 3}, false},
 		{[]int{2, 2, 4}, true},
+		{[]int{-2, 9, 5, 3}, false},
 		{[]int{1, 3, 5, 9, 6}, false},
 		{[]int{-2, -6, 8}, true},
 		{[]int{1, 76, 21}, false},

@@ -37,8 +37,8 @@ func TestSpiral(t *testing.T) {
 			{11, 10, 9},
 		}},
 	} {
-		got := spiral(tc.x, tc.y)
-		if !equal(got, tc.want) {
+
+		if got := spiral(tc.x, tc.y); !equal(got, tc.want) {
 			t.Errorf("Spiral(%v, %v) = %v, want = %v", tc.x, tc.y, got, tc.want)
 		}
 	}

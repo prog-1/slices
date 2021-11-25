@@ -10,11 +10,8 @@ func spiral(x, y int) [][]int {
 	}
 
 	l := 1
+	var a, b, xmin, ymin int
 
-	a := 0
-	b := 0
-	xmin := 0
-	ymin := 0
 	xmax := x - 1
 	ymax := y - 1
 	for l < x*y {

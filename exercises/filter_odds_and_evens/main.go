@@ -15,12 +15,11 @@ func FilterEvens(s []int) (d []int) {
 
 func FilterOdds(s []int) (a []int) {
 	for _, v := range s {
-		if v%2 == 1 {
+		if v%2 != 0 {
 			a = append(a, v)
+
 		}
-		if v%2 == -1 {
-			a = append(a, v)
-		}
+
 	}
 	return a
 }

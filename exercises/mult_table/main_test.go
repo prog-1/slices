@@ -15,8 +15,7 @@ func TestMultTable(t *testing.T) {
 		{0, 8, 16, 24, 32, 40, 48, 56, 64, 72},
 		{0, 9, 18, 27, 36, 45, 54, 63, 72, 81},
 	}
-	got := MultTable()
-	if got != want {
-		t.Errorf("got = %v, want = %v", got, want)
+	if got := MultTable(); got != want {
+		t.Errorf("got =%v, want = %v", got, want)
 	}
 }
