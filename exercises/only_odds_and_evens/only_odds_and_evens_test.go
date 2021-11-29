@@ -8,6 +8,7 @@ func TestAreOddsOnly(t *testing.T) {
 		want bool
 	}{
 		{[]int{}, true},
+		{[]int{0}, false},
 		{[]int{1}, true},
 		{[]int{2}, false},
 		{[]int{2, 4, 5}, false},

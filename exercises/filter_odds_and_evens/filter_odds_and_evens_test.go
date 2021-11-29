@@ -15,6 +15,7 @@ func TestFilterOdds(t *testing.T) {
 		{[]int{-3, 1, 5}, []int{-3, 1, 5}},
 		{[]int{1}, []int{1}},
 		{[]int{2}, []int{}},
+		{[]int{0}, []int{}},
 	} {
 		got := FilterOdds(tc.s)
 		if !equal(got, tc.want) {
@@ -30,6 +31,7 @@ func TestFilterEvens(t *testing.T) {
 		want []int
 	}{
 		{[]int{}, []int{}},
+		{[]int{0}, []int{0}},
 		{[]int{1}, []int{}},
 		{[]int{2}, []int{2}},
 		{[]int{2, 4, 6}, []int{2, 4, 6}},
