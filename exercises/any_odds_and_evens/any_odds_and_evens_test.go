@@ -8,6 +8,7 @@ func TestAnyIsOdd(t *testing.T) {
 		want bool
 	}{
 		{[]int{}, false},
+		{[]int{0}, false},
 		{[]int{2}, false},
 		{[]int{3}, true},
 		{[]int{2, 4, 8}, false},
@@ -27,6 +28,7 @@ func TestAnyIsEven(t *testing.T) {
 		want bool
 	}{
 		{[]int{}, false},
+		{[]int{0}, true},
 		{[]int{2}, true},
 		{[]int{1}, false},
 		{[]int{2, 6, 12}, true},
