@@ -27,8 +27,10 @@ func output(a [][]int) {
 }
 
 func main() {
-	output(Rect(1, 2))
+	fmt.Println("This program prints a rectangle which borders are covered with 1.")
+	fmt.Println("Write width and height of rectangle: ")
+	var x, y int
+	fmt.Scan(&x, &y)
+	output(Rect(x, y))
 
 }
-
-//aboba
